@@ -1,27 +1,6 @@
 export default {
   state: {
-    marketData: [
-      {
-        id: 'sdfgh',
-        title: 'placeholder',
-        number: 20
-      },
-      {
-        id: 'fgtrdsx',
-        title: 'placeholder',
-        number: 7
-      },
-      {
-        id: 'hgtredc',
-        title: 'placeholder',
-        number: 3
-      },
-      {
-        id: 'swe456yu',
-        title: 'placeholder',
-        number: 10
-      },
-    ],
+    marketData: _makeRandomData(10),
     filterOptions: [
       {
         name: "companies",
@@ -44,7 +23,7 @@ export default {
         options: ["regions (All)", "placeholder", "placeholder", "placeholder", "placeholder"],
       },
     ],
-    filterDates: [1657706016666, 1657706016666]
+    filterDates: [1657706016666, 1657706016666],
   },
   getters: {
     marketData(state) {
@@ -60,3 +39,30 @@ export default {
   mutations: {},
   actions: {},
 };
+
+function _makeId(length = 5) {
+  var txt = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < length; i++) {
+    txt += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return txt;
+}
+
+function _getRandomInt(min = 0, max = 100) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function _makeRandomData(x) {
+  var data = [];
+  for (let index = 0; index < x; index++) {
+    data.push({
+      id: _makeId(),
+      title: "placeholder",
+      number: _getRandomInt(),
+    })
+  }
+  return data
+}

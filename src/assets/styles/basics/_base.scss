@@ -37,6 +37,20 @@ input {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+
+  &-track {
+    background: $pClr2;
+  }
+  &-thumb {
+    background: $pClr4;
+    &:hover {
+      background: $pClr5;
+    }
+  }
+}
+
 .app {
   padding: 20px;
 }

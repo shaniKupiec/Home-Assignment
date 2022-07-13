@@ -1,0 +1,25 @@
+.market-preview {
+    @include flex(row, space-between);
+    &__left {
+        @include flex();
+        gap: 40px;
+        padding-inline-start: 35px;
+
+        &__number {
+            width: 25px;
+        }
+
+        &__block {
+            width: 30px;
+            height: 30px;
+            background-color: $pClr4;
+        }
+
+        &__title {
+        }
+    }
+    &__right {
+        cursor: pointer;
+        width: 63px;
+    }
+}
