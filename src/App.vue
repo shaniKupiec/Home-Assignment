@@ -1,22 +1,20 @@
 <template>
-  <section>
-    html
-  </section>
+  <AppHeader />
+  <router-view />
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
+import AppHeader from './components/AppHeader.vue' 
 
 export default {
-//  props: {
-//    car: Object,
-//  },
-  components: {},
+  components: {
+    AppHeader
+  },
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {},
-}
+};
 </script>
