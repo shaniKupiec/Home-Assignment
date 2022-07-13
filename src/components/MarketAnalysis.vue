@@ -2,7 +2,7 @@
   <section>
     <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates"/>
     <MarketSearch />
-    <MarketList />
+    <MarketList :marketData="marketData"/>
     <MarketChart />
   </section>
 </template>
@@ -34,6 +34,9 @@ export default {
     },
     filterDates(){
       return this.$store.getters.filterDates
+    },
+    marketData(){
+      return this.$store.getters.marketData
     },
   },
 }

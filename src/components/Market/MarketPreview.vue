@@ -1,16 +1,22 @@
 <template>
-  <section>
-    market preview
-  </section>
+    <li>
+      <div>
+        <span>{{marketInfo.number}}</span>
+        <span>{{marketInfo.title}}</span>
+      </div>
+      <div>
+        <a href="">link</a>
+        <a href="">link</a>
+      </div>
+    </li>
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
 
 export default {
-//  props: {
-//    car: Object,
-//  },
+ props: {
+   marketInfo: Object,
+ },
   components: {},
   data() {
     return {}

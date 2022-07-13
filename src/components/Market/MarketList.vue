@@ -1,22 +1,26 @@
 <template>
   <section>
-    market list
+    <ul>
+      <MarketPreview v-for="marketInfo in marketData" :key="marketInfo.id" :marketInfo="marketInfo" />
+    </ul>
   </section>
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
+import MarketPreview from "./MarketPreview.vue";
 
 export default {
-//  props: {
-//    car: Object,
-//  },
-  components: {},
+  props: {
+    marketData: Object,
+  },
+  components: {
+    MarketPreview,
+  },
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {},
-}
+};
 </script>

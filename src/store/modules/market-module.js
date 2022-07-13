@@ -1,6 +1,27 @@
 export default {
   state: {
-    marketData: [],
+    marketData: [
+      {
+        id: 'sdfgh',
+        title: 'placeholder',
+        number: 20
+      },
+      {
+        id: 'fgtrdsx',
+        title: 'placeholder',
+        number: 7
+      },
+      {
+        id: 'hgtredc',
+        title: 'placeholder',
+        number: 3
+      },
+      {
+        id: 'swe456yu',
+        title: 'placeholder',
+        number: 10
+      },
+    ],
     filterOptions: [
       {
         name: "companies",
