@@ -1,0 +1,35 @@
+.market-filter {
+    @include flex(row, space-between);
+    background-color: $pClr1;
+    padding: 15px 30px;
+    border-top: 1px solid $pClr2;
+    &__left {
+        @include flex();
+        gap: 40px;
+        &__selects {
+            select {
+                border: 0;
+                background-color: $pClr1;
+            }
+        }
+
+        &__btns {
+            @include flex();
+            gap: 5px;
+            div{
+                background-color: $pClr2;
+                border-radius: 5px;
+                padding: 7px 12px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__right{
+        @include flex();
+        gap: 10px;
+       &__img{
+        width: 20px;
+       } 
+    }
+}
