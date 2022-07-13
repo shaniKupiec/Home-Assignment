@@ -1,25 +1,26 @@
 <template>
-  <section>
-    <HomeHeader />
-    <router-view></router-view>
-  </section>
+  <AppHeader />
+  <HomeNav />
+  <router-view></router-view>
 </template>
 
 <script>
-import HomeHeader from '../components/HomeHeader.vue'
+import AppHeader from "../components/AppHeader.vue";
+import HomeNav from "../components/HomeNav.vue";
 
 export default {
-//  props: {
-//    car: Object,
-//  },
+  //  props: {
+  //    car: Object,
+  //  },
   components: {
-    HomeHeader
+    HomeNav,
+    AppHeader,
   },
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {},
-}
+};
 </script>
