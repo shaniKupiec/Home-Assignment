@@ -1,0 +1,29 @@
+.app-header {
+    padding: 20px;
+    @include flex(row, space-between);
+    &__left {
+        @include flex();
+        gap: 5px;
+        &__list {
+            @include flex();
+            gap: 10px;
+            padding: 5px 10px;
+            background-color: $pClr1;
+            li {
+                //ADD
+            }
+        }
+
+        &__img {
+            width: 15px;
+            cursor: pointer;
+        }
+    }
+    &__right {
+        width: 15px;
+        height: 15px;
+        background-color: $pClr4;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+}

@@ -12,3 +12,12 @@
 //VIEWS
 
 // COMPONENTS
+@import 'components/app-header';
+@import 'components/home-header';
+@import 'components/market-analysis';
+
+// MARKET
+@import 'components/market/market-filter';
+@import 'components/market/market-search';
+@import 'components/market/market-list';
+@import 'components/market/market-preview';

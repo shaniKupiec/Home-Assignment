@@ -1,22 +1,25 @@
 <template>
-  <section>
-    app header
-  </section>
+  <header class="app-header">
+    <div class="app-header__left">
+      <ul class="app-header__left__list">
+        <li>.brew^</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+      </ul>
+      <img src=".././assets/images/light-more.png" class="app-header__left__img" alt="" />
+    </div>
+    <div class="app-header__right"></div>
+  </header>
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
-
 export default {
-//  props: {
-//    car: Object,
-//  },
   components: {},
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {},
-}
+};
 </script>
