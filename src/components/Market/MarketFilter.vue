@@ -12,8 +12,6 @@
       </div>
     </section>
     <div class="market-filter__right">
-      <!-- <span>{{ from }} -</span>
-      <span>{{ to }}</span> ADD -->
       <span>date</span>
       <img src="../../assets/images/date-icon.png" class="market-filter__right__img" alt="" />
     </div>
@@ -26,7 +24,6 @@
 export default {
   props: {
     filterOptions: Object,
-    filterDates: Object,
     filter: Object,
   },
   components: {},
@@ -41,12 +38,6 @@ export default {
   methods: {
   },
   computed: {
-    from() {
-      return new Date(this.filterDates[0]).toUTCString();
-    },
-    to() { //ADD
-      return new Date(this.filterDates[1]).toUTCString();
-    },
   },
   watch: {
     selected: {

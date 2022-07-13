@@ -6,12 +6,16 @@
         gap: 5px;
         &__list {
             @include flex();
-            gap: 10px;
             padding: 5px 10px;
             background-color: $pClr1;
             border-radius: 5px;
             li {
-                //ADD
+                box-shadow: inset -1px 0px 0px 0px $pClr2;
+                padding-inline-end: 10px;
+                padding-inline-start: 10px;
+                &:last-child {
+                    box-shadow: none;
+                }
             }
         }
 
