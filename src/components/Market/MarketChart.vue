@@ -1,22 +1,15 @@
 <template>
-  <section>
-    market chart
-  </section>
+  <img src="../../assets/images/chart.png" class="market-analysis__chart" alt="" />
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
-
 export default {
-//  props: {
-//    car: Object,
-//  },
   components: {},
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {},
-}
+};
 </script>

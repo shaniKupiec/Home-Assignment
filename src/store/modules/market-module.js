@@ -1,6 +1,6 @@
 export default {
   state: {
-    marketData: _makeRandomData(10),
+    marketData: _makeRandomData(30),
     filterOptions: [
       {
         name: "companies",

@@ -1,43 +1,43 @@
 <template>
-  <section>
-    <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates"/>
-    <MarketSearch />
-    <MarketList :marketData="marketData"/>
+  <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates" />
+  <MarketSearch />
+  <main class="market-analysis">
+    <MarketList :marketData="marketData" />
     <MarketChart />
-  </section>
+  </main>
 </template>
 
 <script>
-import MarketFilter from './Market/MarketFilter.vue'
-import MarketSearch from './Market/MarketSearch.vue'
-import MarketList from './Market/MarketList.vue'
-import MarketChart from './Market/MarketChart.vue'
+import MarketFilter from "./Market/MarketFilter.vue";
+import MarketSearch from "./Market/MarketSearch.vue";
+import MarketList from "./Market/MarketList.vue";
+import MarketChart from "./Market/MarketChart.vue";
 
 export default {
-//  props: {
-//    car: Object,
-//  },
+  //  props: {
+  //    car: Object,
+  //  },
   components: {
     MarketFilter,
     MarketSearch,
     MarketList,
-    MarketChart
+    MarketChart,
   },
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
   computed: {
-    filterOptions(){
-      return this.$store.getters.filterOptions
+    filterOptions() {
+      return this.$store.getters.filterOptions;
     },
-    filterDates(){
-      return this.$store.getters.filterDates
+    filterDates() {
+      return this.$store.getters.filterDates;
     },
-    marketData(){
-      return this.$store.getters.marketData
+    marketData() {
+      return this.$store.getters.marketData;
     },
   },
-}
+};
 </script>

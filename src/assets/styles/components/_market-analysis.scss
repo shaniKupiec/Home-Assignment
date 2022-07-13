@@ -1,0 +1,26 @@
+.market-analysis {
+    @include flex(row, space-between, stretch);
+    gap: 20px;
+
+    &__chart {
+        flex: 1 1 0px;
+        box-shadow: 0px 0px 7px 0px $pClr3;
+        object-fit: contain;
+    }
+}
+
+//ADD
+// @media (max-width: 1350px) {
+//     .market-analysis {
+//         &__chart {
+//             width: 500px;
+//         }
+//     }
+// }
+
+
+@media (min-width: break-normal) {
+}
+
+@media (min-width: break-wide) {
+}
