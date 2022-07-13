@@ -7,7 +7,6 @@ import CompetitiveAnalysis from '../components/CompetitiveAnalysis.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
     component: HomeView,
     children: [
       {

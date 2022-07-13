@@ -1,6 +1,16 @@
 <template>
   <section>
-    market filter
+    <div>
+      <select v-for="topic in filterOptions" :key="topic.name">
+        <option v-for="option in topic.options" :key="option" :value="option">{{ option }}</option>
+      </select>
+      <button>x</button>
+      <button>x</button>
+    </div>
+    <div>
+      <span>{{ from }} -</span>
+      <span>{{ to }}</span>
+    </div>
   </section>
 </template>
 
@@ -8,15 +18,23 @@
 // import appHeader from './components/app-header.vue'
 
 export default {
-//  props: {
-//    car: Object,
-//  },
+  props: {
+    filterOptions: Object,
+    filterDates: Object,
+  },
   components: {},
   data() {
-    return {}
+    return {};
   },
   created() {},
   methods: {},
-  computed: {},
-}
+  computed: {
+    from() {
+      return new Date(this.filterDates[0]).toUTCString();
+    },
+    to() {
+      return new Date(this.filterDates[1]).toUTCString();
+    },
+  },
+};
 </script>

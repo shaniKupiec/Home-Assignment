@@ -1,6 +1,6 @@
 <template>
   <section>
-    <MarketFilter />
+    <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates"/>
     <MarketSearch />
     <MarketList />
     <MarketChart />
@@ -28,6 +28,13 @@ export default {
   },
   created() {},
   methods: {},
-  computed: {},
+  computed: {
+    filterOptions(){
+      return this.$store.getters.filterOptions
+    },
+    filterDates(){
+      return this.$store.getters.filterDates
+    },
+  },
 }
 </script>
