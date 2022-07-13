@@ -19,7 +19,7 @@ user interaction => small component => main component => action in the store => 
 E.g in the search component on every change of the search input an emit is sent to the MarketAnalysis component, that dispatch to the store with the new changes.
 The action calls the marketDataService, and sends a request to the backend, and updates the store with the new values.
 
-## styling
+## Styling
 I chose to work with SCSS and BEM — Block Element Modifier is a methodology that helps you to create reusable code.
 
 ## Installation
