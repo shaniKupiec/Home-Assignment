@@ -1,6 +1,7 @@
 .market-analysis {
     @include flex(row, space-between, stretch);
     gap: 20px;
+    margin-bottom: 20px;
 
     &__chart {
         flex: 1;
@@ -36,7 +37,6 @@
 
         &__chart {
             width: 100%;
-            margin-bottom: 20px;
         }
     }
 }

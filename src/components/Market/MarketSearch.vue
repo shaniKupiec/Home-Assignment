@@ -1,22 +1,39 @@
 <template>
-  <section>
-    market search
+  <section class="market-search">
+    <div class="market-search__left">
+      <span v-for="btn in searchBtns" :key="btn" :class="{ active: value === btn }" @click="value = btn">xxx</span>
+    </div>
+    <div class="market-search__right">
+      <img src="../../assets/images/export.png" class="market-search__right__img" alt="" />
+      <input type="text" class="market-search__right__input" v-model="search" />
+    </div>
   </section>
 </template>
 
 <script>
-// import appHeader from './components/app-header.vue'
-
 export default {
-//  props: {
-//    car: Object,
-//  },
+  props: {
+    searchBtns: Object,
+  },
   components: {},
   data() {
-    return {}
+    return {
+      value: "",
+      search: "",
+    };
   },
-  created() {},
+  created() {
+    this.value = this.searchBtns[0];
+  },
   methods: {},
   computed: {},
-}
+  watch: {
+    search: {
+      handler() {
+        this.$emit("onSearch", JSON.parse(JSON.stringify(this.search)));
+      },
+    },
+  },
+  emits: ["onSearch"],
+};
 </script>

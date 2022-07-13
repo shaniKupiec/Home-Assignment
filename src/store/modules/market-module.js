@@ -27,6 +27,8 @@ export default {
     ],
     filterDates: [1657706016666, 1657706016666],
     filter: { audience: "audience (All)", companies: "companies (All)", regions: "regions (All)", topics: "topics (All)", verticals: "verticals (All)" },
+    searchBtns: ['placeholder1', 'placeholder2', 'placeholder3', 'placeholder4'],
+    search: ''
   },
   getters: {
     marketData(state) {
@@ -41,6 +43,12 @@ export default {
     filter(state) {
       return state.filter;
     },
+    searchBtns(state) {
+      return state.searchBtns;
+    },
+    search(state) {
+      return state.search;
+    },
   },
   mutations: {
     setFilter(state, { filter }) {
@@ -49,11 +57,14 @@ export default {
     setMarketData(state, { marketData }) {
       state.filter = marketData;
     },
+    setSearch(state, { search }) {
+      state.search = search;
+    },
   },
   actions: {
     async loadMarketData({ commit, state }) {
       try {
-        // const marketData = marketDataService.query(state.filter);
+        // const marketData = marketDataService.query(state.filter, state.search);
         // await commit({ type: "setMarketData", marketData });
       } catch (err) {
         console.error("Cannot loadMarketData", err);
@@ -66,6 +77,16 @@ export default {
         dispatch({ type: "loadMarketData" })
       } catch (err) {
         console.error("Cannot setFilter", err);
+        throw err;
+      }
+    },
+    async setSearch({ commit, dispatch }, { search }) {
+      try {
+        console.log('setSearch', search);
+        commit({ type: "setSearch", search });
+        dispatch({ type: "loadMarketData" })
+      } catch (err) {
+        console.error("Cannot setSearch", err);
         throw err;
       }
     },

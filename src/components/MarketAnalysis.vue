@@ -1,6 +1,6 @@
 <template>
   <MarketFilter :filterOptions="filterOptions" :filter="filter" @onFilter="onFilter" />
-  <MarketSearch />
+  <MarketSearch :searchBtns="searchBtns" @onSearch="onSearch"/>
   <main class="market-analysis">
     <MarketList :marketData="marketData" />
     <MarketChart />
@@ -28,6 +28,9 @@ export default {
     onFilter(selected) {
       this.$store.dispatch({ type: "setFilter", filter: selected });
     },
+    onSearch(search) {
+      this.$store.dispatch({ type: "setSearch", search });
+    },
   },
   computed: {
     filterOptions() {
@@ -39,6 +42,9 @@ export default {
     marketData() {
       return this.$store.getters.marketData;
     },
+    searchBtns(){
+      return this.$store.getters.searchBtns;
+    }
   },
 };
 </script>

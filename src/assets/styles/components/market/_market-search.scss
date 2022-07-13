@@ -1,0 +1,32 @@
+.market-search {
+    @include flex(row, space-between);
+    padding: 15px 30px;
+    
+    &__left {
+        @include flex();
+        gap: 10px;
+        
+        span{
+            border-radius: 15px;
+            padding: 5px 10px;
+            color: black;
+            cursor: pointer;
+            &.active{
+                background-color: $pClr5;
+                color: white;
+            }
+        }
+    }
+    
+    &__right{
+        @include flex();
+        gap: 5px;
+        &__img{
+            width: 20px;
+        }
+
+        &__input{
+
+        }
+    }
+}
