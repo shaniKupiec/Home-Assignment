@@ -29,16 +29,6 @@ const routes = [
   //   name: 'signup',
   //   component: signupView
   // },
-  // {
-  //   path: '/workspace',
-  //   name: 'workspace',
-  //   component: workspaceView
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
 const router = createRouter({

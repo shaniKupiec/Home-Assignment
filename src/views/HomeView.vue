@@ -9,9 +9,6 @@ import AppHeader from "../components/AppHeader.vue";
 import HomeNav from "../components/HomeNav.vue";
 
 export default {
-  //  props: {
-  //    car: Object,
-  //  },
   components: {
     HomeNav,
     AppHeader,

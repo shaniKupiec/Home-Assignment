@@ -1,24 +1,30 @@
-// .main-layout {
-//     display: grid;
-//     grid-template-columns: $layoutPadding 1fr $layoutPadding;
+@media (max-width: $break-normal) {
+    .market-analysis {
+        
+        .market-list{
+            height: 500px;
+            
+            &__list{
+                height: 95%;
+            }
+        }
 
-//     > * {
-//         grid-column: 2;
-//     }
+        &__chart {
+            width: 500px;
+        }
+    }
+}
 
-//     > *.full {
-//         grid-column: 1 / -1;
-//     }
+@media (max-width: $break-narrow) {
+    .market-analysis {
+        flex-direction: column;
+        
+        .market-list{
+            height: 300px;
+        }
 
-//     @include for-narrow-layout {
-//         @include layoutGTC($break-narrow);
-//     }
-    
-//     @include for-normal-layout {
-//         @include layoutGTC($break-normal);
-//     }
-    
-//     @include for-wide-layout {
-//         @include layoutGTC($break-wide);
-//     }
-// }
+        &__chart {
+            width: 100%;
+        }
+    }
+}

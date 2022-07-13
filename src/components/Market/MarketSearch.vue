@@ -5,7 +5,7 @@
     </div>
     <div class="market-search__right">
       <img src="../../assets/images/export.png" class="market-search__right__img" alt="" />
-      <input type="text" class="market-search__right__input" v-model="search" />
+      <input type="text" v-model="search" />
     </div>
   </section>
 </template>

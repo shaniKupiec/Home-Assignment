@@ -1,21 +1,10 @@
-// COLORS
-
-//primary
+//COLORS
 $pClr1: rgb(248, 248, 248);
 $pClr2: rgb(218, 218, 218);
 $pClr3: rgb(137, 137, 137);
 $pClr4: rgb(120, 120, 120);
 $pClr5: rgb(28, 28, 28);
 
-
-// // // LAYOUT
-// $layoutPadding: 20px;
-
-// // LAYOUT BREAKPOINTS
-// $break-narrow: 600px;
-// $break-normal: 900px;
-// $break-wide: 1200px;
-
-// $padded-break-narrow: $break-narrow + $layoutPadding * 2;
-// $padded-break-normal: $break-normal + $layoutPadding * 2;
-// $padded-break-wide: $break-wide + $layoutPadding * 2;
+// LAYOUT BREAKPOINTS
+$break-narrow: 1000px;
+$break-normal: 1350px;

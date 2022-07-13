@@ -10,40 +10,4 @@
     }
 }
 
-@media (max-width: 1350px) {
-    .market-analysis {
-        
-        .market-list{
-            height: 500px;
-            
-            &__list{
-                height: 95%;
-            }
-        }
 
-        &__chart {
-            width: 500px;
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .market-analysis {
-        flex-direction: column;
-        
-        .market-list{
-            height: 300px;
-        }
-
-        &__chart {
-            width: 100%;
-        }
-    }
-}
-
-
-@media (min-width: break-normal) {
-}
-
-@media (min-width: break-wide) {
-}
