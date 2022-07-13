@@ -1,3 +1,5 @@
+import { marketDataService } from "@/service/market-data.service";
+
 export default {
   state: {
     marketData: _makeRandomData(30),
@@ -24,6 +26,7 @@ export default {
       },
     ],
     filterDates: [1657706016666, 1657706016666],
+    filter: { audience: "audience (All)", companies: "companies (All)", regions: "regions (All)", topics: "topics (All)", verticals: "verticals (All)" },
   },
   getters: {
     marketData(state) {
@@ -35,9 +38,38 @@ export default {
     filterDates(state) {
       return state.filterDates;
     },
+    filter(state) {
+      return state.filter;
+    },
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    setFilter(state, { filter }) {
+      state.filter = filter;
+    },
+    setMarketData(state, { marketData }) {
+      state.filter = marketData;
+    },
+  },
+  actions: {
+    async loadMarketData({ commit, state }) {
+      try {
+        // const marketData = marketDataService.query(state.filter);
+        // await commit({ type: "setMarketData", marketData });
+      } catch (err) {
+        console.error("Cannot loadMarketData", err);
+        throw err;
+      }
+    },
+    async setFilter({ commit, dispatch }, { filter }) {
+      try {
+        commit({ type: "setFilter", filter });
+        dispatch({ type: "loadMarketData" })
+      } catch (err) {
+        console.error("Cannot setFilter", err);
+        throw err;
+      }
+    },
+  },
 };
 
 function _makeId(length = 5) {
@@ -62,7 +94,7 @@ function _makeRandomData(x) {
       id: _makeId(),
       title: "placeholder",
       number: _getRandomInt(),
-    })
+    });
   }
-  return data
+  return data;
 }

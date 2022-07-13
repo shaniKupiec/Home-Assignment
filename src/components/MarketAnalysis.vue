@@ -1,5 +1,5 @@
 <template>
-  <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates" />
+  <MarketFilter :filterOptions="filterOptions" :filterDates="filterDates" :filter="filter" @onFilter="onFilter" />
   <MarketSearch />
   <main class="market-analysis">
     <MarketList :marketData="marketData" />
@@ -14,9 +14,6 @@ import MarketList from "./Market/MarketList.vue";
 import MarketChart from "./Market/MarketChart.vue";
 
 export default {
-  //  props: {
-  //    car: Object,
-  //  },
   components: {
     MarketFilter,
     MarketSearch,
@@ -27,13 +24,21 @@ export default {
     return {};
   },
   created() {},
-  methods: {},
+  methods: {
+    onFilter(selected) {
+      console.log("selected", selected);
+      this.$store.dispatch({ type: "setFilter", filter: selected });
+    },
+  },
   computed: {
     filterOptions() {
       return this.$store.getters.filterOptions;
     },
     filterDates() {
       return this.$store.getters.filterDates;
+    },
+    filter() {
+      return this.$store.getters.filter;
     },
     marketData() {
       return this.$store.getters.marketData;
