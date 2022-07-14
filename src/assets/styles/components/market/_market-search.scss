@@ -27,3 +27,12 @@
         }
     }
 }
+
+@media (max-width: $break-narrow) {
+    .market-search {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+}

@@ -1,7 +1,7 @@
 <template>
   <MarketFilter :filterOptions="filterOptions" :filter="filter" @onFilter="onFilter" />
-  <MarketSearch :searchBtns="searchBtns" @onSearch="onSearch"/>
-  <main class="market-analysis">
+  <MarketSearch :searchBtns="searchBtns" @onSearch="onSearch" />
+  <main :class="{ 'market-analysis': true, scroll: isScroll }" id="app4">
     <MarketList :marketData="marketData" />
     <MarketChart />
   </main>
@@ -21,9 +21,22 @@ export default {
     MarketChart,
   },
   data() {
-    return {};
+    return {
+      isScroll: false,
+    };
   },
   created() {},
+  mounted() {
+    setTimeout(() => {
+      var div = document.querySelector(".market-analysis");
+      // console.log('div.properties',div.properties)
+      // console.log('div.scrollWidth',div.scrollWidth)
+      // console.log('div.clientWidth',div.clientWidth)
+      this.isScroll = div.scrollWidth > div.clientWidth;
+      console.log("hasHorizontalScrollbar", this.isScroll);
+
+    }, 0)
+  },
   methods: {
     onFilter(selected) {
       this.$store.dispatch({ type: "setFilter", filter: selected });
@@ -42,9 +55,9 @@ export default {
     marketData() {
       return this.$store.getters.marketData;
     },
-    searchBtns(){
+    searchBtns() {
       return this.$store.getters.searchBtns;
-    }
+    },
   },
 };
 </script>
