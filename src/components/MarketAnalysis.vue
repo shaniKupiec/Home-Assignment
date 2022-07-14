@@ -29,12 +29,7 @@ export default {
   mounted() {
     setTimeout(() => {
       var div = document.querySelector(".market-analysis");
-      // console.log('div.properties',div.properties)
-      // console.log('div.scrollWidth',div.scrollWidth)
-      // console.log('div.clientWidth',div.clientWidth)
       this.isScroll = div.scrollWidth > div.clientWidth;
-      console.log("hasHorizontalScrollbar", this.isScroll);
-
     }, 0)
   },
   methods: {
