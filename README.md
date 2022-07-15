@@ -1,3 +1,5 @@
+<a href="https://shanikupiec.github.io/Home-Assignment/" target="blank">Link to GitHub Pages</a>
+
 ![image not found](https://res.cloudinary.com/trellox/image/upload/v1657728129/github%20-%20readme/xxx_xjxbt3.jpg)
 
 ## Router
